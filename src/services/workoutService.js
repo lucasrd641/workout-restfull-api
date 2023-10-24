@@ -1,5 +1,8 @@
-const getAllWorkouts = () => {
-    return;
+const workoutRepository = require("../repositories/workoutRepository");
+
+const getAllWorkouts = async () => {
+    const allWorkouts = await workoutRepository.getAllWorkouts();
+    return allWorkouts;
 };
 
 const getOneWorkout = () => {

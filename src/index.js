@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-app.use('/api/workout', workoutRoutes)
+app.use('/api/workouts', workoutRoutes)
 
 app.listen(PORT, () => {
     console.log(`API is listening on port ${PORT}`);
