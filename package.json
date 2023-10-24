@@ -4,20 +4,13 @@
   "description": "Simple Restfull Crud Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lucasrd641/workout-restfull-api.git"
+    "dev": "nodemon src/index.js"
   },
   "author": "Lucas Denipotti",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lucasrd641/workout-restfull-api/issues"
-  },
-  "homepage": "https://github.com/lucasrd641/workout-restfull-api#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "joi": "^17.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
