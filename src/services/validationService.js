@@ -1,13 +1,17 @@
 const Joi = require('joi');
 
 const validateInput = async (input, schema) => {
-    try {
-        await Joi.validate(input, schema.params);
-        return null;
-    } catch (err) {
+    const validate = await schema.validate(input);
+    console.log(validate);
+    if (validate.error) {
         return {
-            error: err.name,
-            message: err.details[0].message,
+            error: validate.error.name,
+            message: validate.error.message,
         };
     }
+    return null;
 };
+
+module.exports = {
+    validateInput,
+}
